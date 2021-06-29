@@ -38,8 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'project.member',
-    'project.board',
+    'member',
+    'board',
+    'chicago',
+    'common',
+    'crime',
+    'election',
+    'gas_station',
+    'nl_prcs',
+    'population',
+    'time_series',
+
 ]
 
 MIDDLEWARE = [
@@ -114,13 +123,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
