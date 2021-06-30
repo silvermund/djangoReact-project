@@ -1,10 +1,11 @@
 from rest_framework import serializers
-from .models import
+from .models import Post
 
 class BoardSerializer(serializers.Serializer):
-    id = serializers.IntegerField()
+    id = serializers.IntegerField(read_only=True)
     title = serializers.CharField()
-    code = serializers.CharField()
-    linenos = serializers.BooleanField()
-    language = serializers.ChoiceField()
-    style = serializers.ChoiceField()
+    content = serializers.CharField()
+    created_at = serializers.DateTimeField(read_only=True)
+    updated_at = serializers.DateTimeField(read_only=True)
+    def create(self, validated_data):
+        return Post.objects.create(**validated_data)
