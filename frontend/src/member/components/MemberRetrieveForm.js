@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import '../styles/MemberRetrieve.css'
 
-const MemberRetrieve = () => {
+const MemberRetrieveForm = () => {
 
 }
 
-export default MemberRetrieve
+export default MemberRetrieveForm
